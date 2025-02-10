@@ -77,6 +77,10 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  /* L->R white underline animation*/
+  .animate-underline {
+    @apply after:transform-left after:absolute after:left-auto after:right-0 after:block after:w-0 after:transform after:border-b-2 after:dark:border-white after:border-black after:duration-300 after:ease-out hover:after:left-0 hover:after:right-auto hover:after:w-full;
+  }
 }
 
 @layer utilities {
@@ -103,5 +107,12 @@ body {
      height: round(__,1px);
      width: round(__,1px);
     */
+  }
+  /*animate css*/
+  .transform-left {
+    transform-origin: left;
+  }
+  .transform-right {
+    transform-origin: right;
   }
 }

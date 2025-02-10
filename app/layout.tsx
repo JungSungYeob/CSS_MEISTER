@@ -1,4 +1,7 @@
+import { ChangeThemeSwitch } from '@/components/atoms/ChangeThemeSwitch';
+import { Header } from '@/components/atoms/Header';
 import type { Metadata } from 'next';
+import { cn } from '@/lib/utils';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -12,8 +15,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={`antialiased`}>
+    <html lang='en' suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const theme = localStorage.getItem('dark');
+                if (theme === 'true') {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body
+        className={cn(
+          `antialiased`,
+          'transition-all duration-300',
+          'min-h-screen max-w-screen-lg mx-auto'
+        )}
+      >
+        <header className='fixed top-96 right-10 h-32 w-96 z-[1000]'>
+          <Header />
+          <div className=''>
+            <ChangeThemeSwitch />
+          </div>
+        </header>
         {children}
       </body>
     </html>
