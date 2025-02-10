@@ -39,7 +39,7 @@ export const ChangeThemeSwitch: React.FC<Switch.SwitchProps> = ({
           'w-28 h-12 rounded-full shrink-0 shadow-[inset_0px_4px_6px_rgba(0,0,0,0.5)] inline-flex items-center overflow-hidden relative duration-700 ring-0',
           'data-[state=checked]:bg-slate-900',
           'data-[state=unchecked]:bg-sky-400',
-          isDarkMode === undefined && 'hidden'
+          isDarkMode === undefined ? 'hidden' : 'animate-fadeIn'
         )}
         {...props}
         checked={isDarkMode}
