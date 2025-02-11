@@ -60,6 +60,7 @@ export const honorsAndAwards: honorsAndAwardsProps[] = [
     kr: '디지털 하나로',
     prize: '최우수상',
     info: '디지털 하나로 출결, 성적, 프로젝트 종합 최우수상',
+    organization: '하나은행',
   },
   {
     category: 'internal',
@@ -68,14 +69,16 @@ export const honorsAndAwards: honorsAndAwardsProps[] = [
     kr: '산학연계 SW 프로젝트',
     prize: '총장상',
     info: 'QG-RAG: Multi-Document 환경에서 효과적 정보 검색을 위한 그래프 기반 RAG 시스템 개발',
+    organization: '광운대학교',
   },
   {
     category: 'internal',
     date: '2024.06',
-    en: 'Digital Health Care AI Analysis Presentation',
-    kr: '디지털 헬스케어 인공지능 분석 실무 발표',
+    en: 'Digital Health Care AI Analysis Report',
+    kr: '디지털 헬스케어 인공지능 분석 실무 보고서',
     prize: '장려상',
     info: '',
+    organization: '한국디지털헬스산업협회',
   },
   {
     category: 'internal',
@@ -84,6 +87,7 @@ export const honorsAndAwards: honorsAndAwardsProps[] = [
     kr: '참빛 설계학기',
     prize: '총장상',
     info: '생성형 AI 기반 부동산 선택 지원 서비스',
+    organization: '광운대학교',
   },
   {
     category: 'internal',
@@ -92,5 +96,6 @@ export const honorsAndAwards: honorsAndAwardsProps[] = [
     kr: '광운 메타버스 맵 아이디어 공모전',
     prize: '장려상',
     info: '아이소메트릭 기법을 활용한 맵 제작',
+    organization: '광운대학교',
   },
 ];

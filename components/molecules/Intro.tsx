@@ -24,7 +24,7 @@ export default function Intro() {
           )}
         />
         <ScrollDownButton targetId='target1' />
-        <div className='absolute bottom-10 right-10 text-white text-xl z-[101]'>
+        <div className='absolute md:bottom-10 md:right-10 bottom-3 right-3 text-white text-xl z-[101]'>
           <a
             href='https://github.com/JungSungYeob'
             className='flex flex-row items-center gap-3 cursor-pointer'

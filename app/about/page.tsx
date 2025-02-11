@@ -1,4 +1,5 @@
 import CareerCard from '@/components/atoms/CareerCard';
+import HonorCard from '@/components/atoms/HonorCard';
 import Intro from '@/components/molecules/Intro';
 import { honorsAndAwards, timestamps } from '@/data/aboutMe';
 import Image from 'next/image';
@@ -36,7 +37,7 @@ export default function AboutMe() {
           <article className='p-5 flex flex-col'>
             <h2 className='text-3xl mt-10'>정 성 엽</h2>
             <h2 className='text-2xl'>SungYeob Jung</h2>
-            <h3 className='mt-10'>
+            <h3 className='mt-10 md:text-base text-xs break-keep'>
               &quot;맡은 업무를 책임지고
               <br /> 끝까지 해내는 개발자입니다&quot;
             </h3>
@@ -60,11 +61,12 @@ export default function AboutMe() {
           <h1 className='text-4xl'>Honors & Awards</h1>
           <div className='w-full flex-col flex items-start'>
             {honorsAndAwards.map((item, i) => (
-              <CareerCard
+              <HonorCard
                 date={item.date}
                 kr={item.kr}
                 en={item.en}
-                info={item.info}
+                prize={item.prize}
+                organization={item.organization}
                 key={i}
               />
             ))}

@@ -10,7 +10,7 @@ export const Header = () => {
               </a>
               <a
                 href={'/'}
-                className='animate-underline text-xl font-extrabold dark:font-extrabold md:hidden relative dark:bg-white dark:text-black bg-black text-white rounded-full py-2 px-3'
+                className=' text-xl font-extrabold dark:font-extrabold md:hidden relative dark:bg-white dark:text-black bg-black text-white rounded-full py-2 px-3'
               >
                 J
               </a>

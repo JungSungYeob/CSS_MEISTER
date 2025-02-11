@@ -13,4 +13,5 @@ export type honorsAndAwardsProps = {
   kr: string;
   prize: string;
   info: string;
+  organization: string;
 };
