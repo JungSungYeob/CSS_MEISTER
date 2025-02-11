@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Meister-J.com',
+  title: '개발자 정성엽',
   description: '정성엽의 놀이터',
   authors: {
     url: '',
@@ -47,7 +47,7 @@ export default function RootLayout({
         <header className='fixed top-14 right-1 md:right-10 md:top-14 z-[1000]'>
           <ChangeThemeSwitch />
         </header>
-        {children}
+        <div className='pt-32'>{children}</div>
       </body>
     </html>
   );

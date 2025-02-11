@@ -23,14 +23,16 @@ export default function Intro() {
             'w-full h-full absolute bg-black/50 backdrop-blur-md rounded-xl'
           )}
         />
-        <ScrollDownButton targetId='RecentPosts' />
+        <ScrollDownButton targetId='target1' />
         <div className='absolute bottom-10 right-10 text-white text-xl z-[101]'>
           <a
             href='https://github.com/JungSungYeob'
             className='flex flex-row items-center gap-3 cursor-pointer'
           >
             <FaGithub color='white' size={30} />
-            <h3>Github</h3>
+            <span className='relative'>
+              <h3 className='animate-underline'>Github</h3>
+            </span>
           </a>
         </div>
 
