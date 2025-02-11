@@ -1,6 +1,6 @@
 import CareerCard from '@/components/atoms/CareerCard';
 import Intro from '@/components/molecules/Intro';
-import { timestamps } from '@/data/aboutMe';
+import { honorsAndAwards, timestamps } from '@/data/aboutMe';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -51,7 +51,20 @@ export default function AboutMe() {
                 kr={item.kr}
                 en={item.en}
                 info={item.info}
-                category={item.category}
+                key={i}
+              />
+            ))}
+          </div>
+        </div>
+        <div className='flex flex-col items-center w-full pt-10'>
+          <h1 className='text-4xl'>Honors & Awards</h1>
+          <div className='w-full flex-col flex items-start'>
+            {honorsAndAwards.map((item, i) => (
+              <CareerCard
+                date={item.date}
+                kr={item.kr}
+                en={item.en}
+                info={item.info}
                 key={i}
               />
             ))}

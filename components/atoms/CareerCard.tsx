@@ -1,7 +1,13 @@
-import { timestampProps } from '@/type/aboutMe';
 import { FaCircle } from 'react-icons/fa6';
 
-const CareerCard = ({ date, kr, en, info }: timestampProps) => {
+type CareerCardProp = {
+  date: string;
+  kr: string;
+  en: string;
+  info: string;
+};
+
+const CareerCard = ({ date, kr, en, info }: CareerCardProp) => {
   return (
     <>
       <article className='flex flex-row w-full py-5 border-l-4 border-white items-center'>
