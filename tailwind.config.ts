@@ -15,8 +15,13 @@ export default {
         fadeOut: 'fadeOut 1.5s ease-out forwards',
         'bounce-slow': 'bounce-slow 1.5s infinite',
         gradient: 'gradient 3s linear infinite',
+        blink: 'blink 1s infinite',
       },
       keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '1' }, // 시작과 끝에서 완전히 보임
+          '50%': { opacity: '0' },
+        },
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },

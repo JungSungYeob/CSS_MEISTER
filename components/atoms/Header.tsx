@@ -18,11 +18,12 @@ export const Header = () => {
           </div>
           <div className='flex gap-3 items-center text-xl font-bold'>
             <span className='relative'>
-              <a className='animate-underline cursor-pointer'>Post</a>
-            </span>
-            <span className='relative'>
               <a className='animate-underline cursor-pointer'>about</a>
             </span>
+            <span className='relative'>
+              <a className='animate-underline cursor-pointer'>posts</a>
+            </span>
+
             <span className='relative'>
               <a className='animate-underline cursor-pointer'>guestbook</a>
             </span>

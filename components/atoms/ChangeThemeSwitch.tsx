@@ -5,9 +5,7 @@ import { useEffect, useState } from 'react';
 import { getTheme, setTheme } from '@/lib/storage';
 import { cn } from '@/lib/utils';
 
-export const ChangeThemeSwitch: React.FC<Switch.SwitchProps> = ({
-  ...props
-}) => {
+const ChangeThemeSwitch: React.FC<Switch.SwitchProps> = ({ ...props }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>();
 
   useEffect(() => {
@@ -132,3 +130,5 @@ export const ChangeThemeSwitch: React.FC<Switch.SwitchProps> = ({
     </>
   );
 };
+
+export default ChangeThemeSwitch;

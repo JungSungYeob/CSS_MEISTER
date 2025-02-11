@@ -1,4 +1,4 @@
-import { ChangeThemeSwitch } from '@/components/atoms/ChangeThemeSwitch';
+import ChangeThemeSwitch from '@/components/atoms/ChangeThemeSwitch';
 import { Header } from '@/components/atoms/Header';
 import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
@@ -7,6 +7,10 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Meister-J.com',
   description: '정성엽의 놀이터',
+  authors: {
+    url: '',
+    name: '정성엽',
+  },
 };
 
 export default function RootLayout({
