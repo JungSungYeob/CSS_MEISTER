@@ -34,7 +34,7 @@ const ChangeThemeSwitch: React.FC<Switch.SwitchProps> = ({ ...props }) => {
       <Switch.Root
         className={cn(
           'group',
-          'w-28 h-12 rounded-full shrink-0 shadow-[inset_0px_4px_6px_rgba(0,0,0,0.5)] inline-flex items-center overflow-hidden relative duration-700 ring-0',
+          'w-28 h-12 rounded-full shrink-0 shadow-[inset_0px_4px_6px_rgba(0,0,0,0.5)] inline-flex items-center overflow-hidden relative duration-700 focus:ring-0 ring-0 focus:outline-none outline-none',
           'data-[state=checked]:bg-slate-900',
           'data-[state=unchecked]:bg-sky-400',
           isDarkMode === undefined ? 'hidden' : 'animate-fadeIn'
@@ -42,6 +42,9 @@ const ChangeThemeSwitch: React.FC<Switch.SwitchProps> = ({ ...props }) => {
         {...props}
         checked={isDarkMode}
         onCheckedChange={changeTheme}
+        name='themeButton'
+        id='al'
+        aria-label='Name'
       >
         <span
           className={cn(

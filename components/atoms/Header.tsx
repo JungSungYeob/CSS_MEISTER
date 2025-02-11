@@ -1,7 +1,7 @@
 export const Header = () => {
   return (
     <>
-      <div className='flex justify-center w-full h-16 fixed top-0 left-0 z-50 px-4 xl:px-0'>
+      <div className='flex justify-center w-full h-16 fixed top-0 left-0 z-[1000] px-4 xl:px-0 backdrop-blur-md'>
         <div className='flex items-center justify-between w-full max-w-5xl relative'>
           <div>
             <div id='logo' className='relative text-2xl font-bold'>
@@ -18,17 +18,25 @@ export const Header = () => {
           </div>
           <div className='flex gap-3 items-center text-xl font-bold'>
             <span className='relative'>
-              <a className='animate-underline cursor-pointer'>about</a>
+              <a href='/about' className='animate-underline cursor-pointer'>
+                about
+              </a>
             </span>
             <span className='relative'>
-              <a className='animate-underline cursor-pointer'>posts</a>
+              <a href='/posts' className='animate-underline cursor-pointer'>
+                posts
+              </a>
             </span>
 
             <span className='relative'>
-              <a className='animate-underline cursor-pointer'>guestbook</a>
+              <a href='guestbook' className='animate-underline cursor-pointer'>
+                guestbook
+              </a>
             </span>
             <span className='relative'>
-              <a className='animate-underline cursor-pointer'>playground</a>
+              <a href='playground' className='animate-underline cursor-pointer'>
+                playground
+              </a>
             </span>
           </div>
         </div>

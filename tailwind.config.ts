@@ -16,8 +16,13 @@ export default {
         'bounce-slow': 'bounce-slow 1.5s infinite',
         gradient: 'gradient 3s linear infinite',
         blink: 'blink 1s infinite',
+        floating: 'floatUpDown 3s infinite',
       },
       keyframes: {
+        floatUpDown: {
+          '0%,100%': { transfrom: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
         blink: {
           '0%, 100%': { opacity: '1' }, // 시작과 끝에서 완전히 보임
           '50%': { opacity: '0' },

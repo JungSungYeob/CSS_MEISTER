@@ -52,6 +52,7 @@ const TextWriter = ({
       });
     }
     return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [displayedText, start]);
 
   return (
@@ -59,7 +60,7 @@ const TextWriter = ({
       <>
         {displayedText}
         {isCursor && (
-          <span className='h-full border-2 border-white animate-blink transition-none' />
+          <span className='h-full border md:border-2 border-white animate-blink transition-none' />
         )}
       </>
     </>

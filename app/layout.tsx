@@ -40,14 +40,12 @@ export default function RootLayout({
         className={cn(
           `antialiased`,
           'transition-all duration-300',
-          'min-h-screen max-w-screen-lg mx-auto'
+          'min-h-screen max-w-screen-md mx-auto'
         )}
       >
         <Header />
-        <header className='fixed md:top-16 top-14 right-1 md:right-10 z-[1000]'>
-          <div className=''>
-            <ChangeThemeSwitch />
-          </div>
+        <header className='fixed top-14 right-1 md:right-10 md:top-14 z-[1000]'>
+          <ChangeThemeSwitch />
         </header>
         {children}
       </body>
