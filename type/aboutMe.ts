@@ -11,7 +11,6 @@ export type honorsAndAwardsProps = {
   date: string;
   en: string;
   kr: string;
-  name: string;
   prize: string;
   info: string;
 };
