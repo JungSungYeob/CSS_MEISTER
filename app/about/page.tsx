@@ -1,4 +1,6 @@
+import CareerCard from '@/components/atoms/CareerCard';
 import Intro from '@/components/molecules/Intro';
+import { timestamps } from '@/data/aboutMe';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -19,10 +21,7 @@ export default function AboutMe() {
             Kwangwoon Univ. Computer Information Engineering (2019.03-2025.02)
           </h3>
         </article>
-        <div
-          id='introduce'
-          className='flex flex-row border-b-2 mb-32 justify-around'
-        >
+        <div id='introduce' className='flex flex-row border-b-2 justify-around'>
           <Image
             src={'/images/JungSungYeob.png'}
             alt=''
@@ -42,6 +41,21 @@ export default function AboutMe() {
               <br /> 끝까지 해내는 개발자입니다&quot;
             </h3>
           </article>
+        </div>
+        <div className='flex flex-col items-center w-full pt-10'>
+          <h1 className='text-4xl'>Careers & Activities</h1>
+          <div className='w-full flex-col flex items-start'>
+            {timestamps.map((item, i) => (
+              <CareerCard
+                date={item.date}
+                kr={item.kr}
+                en={item.en}
+                info={item.info}
+                category={item.category}
+                key={i}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>

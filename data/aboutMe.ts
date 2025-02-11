@@ -17,14 +17,14 @@ export const timestamps: timestampProps[] = [
   },
   {
     category: 'Activity',
-    date: '2024.05 - 2024.6',
+    date: '2024.05 - 2024.06',
     en: 'Digital Health Care AI analysis',
     kr: '디지털헬스케어 인공지능 분석 실무 개발',
     info: 'CNN과 Attention 매커니즘을 결합한 감정 분류 모델',
   },
   {
     category: 'Activity',
-    date: '2024.03 - 2024.6',
+    date: '2024.03 - 2024.06',
     en: 'Software Engineering Project',
     kr: '소프트웨어공학 프로젝트',
     info: '코인 거래소 및 커뮤니티 사이트 개발',
@@ -71,7 +71,7 @@ export const honorsAndAwards: honorsAndAwardsProps[] = [
   },
   {
     category: 'internal',
-    date: '2024.6',
+    date: '2024.06',
     en: 'Digital Health Care AI Analysis Presentation',
     kr: '디지털 헬스케어 인공지능 분석 실무 발표',
     prize: '장려상',
@@ -87,7 +87,7 @@ export const honorsAndAwards: honorsAndAwardsProps[] = [
   },
   {
     category: 'internal',
-    date: '2022.8',
+    date: '2022.08',
     en: 'Kwangwoon Metaverse Map Idea',
     kr: '광운 메타버스 맵 아이디어 공모전',
     prize: '장려상',

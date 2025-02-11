@@ -47,7 +47,7 @@ export default function RootLayout({
         <header className='fixed top-14 right-1 md:right-10 md:top-14 z-[1000]'>
           <ChangeThemeSwitch />
         </header>
-        <div className='pt-32'>{children}</div>
+        <div className='pt-32 px-5'>{children}</div>
       </body>
     </html>
   );
