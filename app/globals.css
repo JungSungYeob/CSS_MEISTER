@@ -119,6 +119,7 @@ body {
   /* 마크 다운 관련 CSS */
   .markdownPost h1 {
     font-size: xx-large;
+    font-weight: 700;
   }
   .markdownPost h2 {
     font-size: x-large;
@@ -138,5 +139,9 @@ body {
 
   .dark .markdownPost code {
     background-color: #3f3a3a;
+  }
+
+  .markdownPost blockquote {
+    color: #8b8b8b;
   }
 }

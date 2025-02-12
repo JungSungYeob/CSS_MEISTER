@@ -32,10 +32,13 @@ export default async function PostPage({ params }: { params: { id: string } }) {
   const postData = await fetchPost(dir.id);
   return (
     <>
-      <article className='markdownPost flex flex-col gap-3'>
+      <article className='markdownPost flex flex-col gap-1 pb-32'>
+        <blockquote>{postData.data.category}</blockquote>
         <h1>{postData.data.title}</h1>
         <p>{postData.data.date}</p>
-
+        <br />
+        <hr />
+        <br />
         <div
           className='flex flex-col gap-5'
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
