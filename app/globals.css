@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Pretendard', system-ui, sans-serif;
 }
 
 @layer base {
@@ -43,7 +43,7 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 240 10% 10%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -76,5 +76,72 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  /* L->R white underline animation*/
+  .animate-underline {
+    @apply after:transform-left after:absolute after:left-auto after:right-0 after:block after:w-0 after:transform after:border-b-2 after:dark:border-white after:border-black after:duration-300 after:ease-out hover:after:left-0 hover:after:right-auto hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  /* HTML: <div class="cloud"></div> */
+  .cloud {
+    height: 50px; /* control the size */
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask:
+      var(--g) 100% 100%/30% 60%,
+      var(--g) 70% 0/50% 100%,
+      var(--g) 0 100%/36% 68%,
+      var(--g) 27% 18%/26% 40%,
+      linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #eaeaea;
+  }
+  .sparkle {
+    height: 10px;
+    width: 10px;
+    background: #eaeaea;
+    mask: radial-gradient(#0000 71%, #000 72%) 10000% 10000%/99.5% 99.5%;
+
+    /* if you will use a different unit than px consider round()
+     height: round(__,1px);
+     width: round(__,1px);
+    */
+  }
+  /*animate css*/
+  .transform-left {
+    transform-origin: left;
+  }
+  .transform-right {
+    transform-origin: right;
+  }
+
+  /* 마크 다운 관련 CSS */
+  .markdownPost h1 {
+    font-size: xx-large;
+    font-weight: 700;
+  }
+  .markdownPost h2 {
+    font-size: x-large;
+  }
+  .markdownPost h3 {
+    font-size: larger;
+  }
+  .markdownPost h4 {
+    font-size: large;
+  }
+  .markdownPost code {
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #c6c5c5;
+  }
+
+  .dark .markdownPost code {
+    background-color: #3f3a3a;
+  }
+
+  .markdownPost blockquote {
+    color: #8b8b8b;
   }
 }
