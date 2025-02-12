@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const Header = () => {
   return (
     <>
@@ -18,25 +20,31 @@ export const Header = () => {
           </div>
           <div className='flex gap-3 items-center text-xl font-bold'>
             <span className='relative'>
-              <a href='/about' className='animate-underline cursor-pointer'>
+              <Link href='/about' className='animate-underline cursor-pointer'>
                 about
-              </a>
+              </Link>
             </span>
             <span className='relative'>
-              <a href='/posts' className='animate-underline cursor-pointer'>
+              <Link href='/posts' className='animate-underline cursor-pointer'>
                 posts
-              </a>
+              </Link>
             </span>
 
             <span className='relative'>
-              <a href='guestbook' className='animate-underline cursor-pointer'>
+              <Link
+                href='guestbook'
+                className='animate-underline cursor-pointer'
+              >
                 guestbook
-              </a>
+              </Link>
             </span>
             <span className='relative'>
-              <a href='playground' className='animate-underline cursor-pointer'>
+              <Link
+                href='playground'
+                className='animate-underline cursor-pointer'
+              >
                 playground
-              </a>
+              </Link>
             </span>
           </div>
         </div>
