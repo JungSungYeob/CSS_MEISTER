@@ -27,7 +27,11 @@ async function fetchPost(id: string): Promise<Post & { contentHtml: string }> {
   };
 }
 
-export default async function PostPage({ params }: { params: { id: string } }) {
+type pageProps = {
+  params: Promise<{ id: string }>;
+};
+
+export default async function PostPage({ params }: pageProps) {
   const dir = await params;
   const postData = await fetchPost(dir.id);
   return (

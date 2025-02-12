@@ -2,10 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { slug: string[] } }
-) {
+type reqProps = {
+  params: Promise<{ slug: string[] }>;
+};
+
+export async function GET(req: NextRequest, { params }: reqProps) {
   const { slug } = await params;
 
   const imagePath = path.join(process.cwd(), 'contents', ...slug);
