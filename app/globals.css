@@ -116,16 +116,27 @@ body {
     transform-origin: right;
   }
 
-  .observe {
-    opacity: 0;
-    transform: translateY(20px);
-    transition:
-      opacity 0.5s ease,
-      transform 0.5s ease;
+  /* 마크 다운 관련 CSS */
+  .markdownPost h1 {
+    font-size: xx-large;
+  }
+  .markdownPost h2 {
+    font-size: x-large;
+  }
+  .markdownPost h3 {
+    font-size: larger;
+  }
+  .markdownPost h4 {
+    font-size: large;
+  }
+  .markdownPost code {
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #c6c5c5;
   }
 
-  .observe.visible {
-    opacity: 1;
-    transform: translateY(0);
+  .dark .markdownPost code {
+    background-color: #3f3a3a;
   }
 }

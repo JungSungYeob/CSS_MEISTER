@@ -15,7 +15,7 @@ const CareerCard = ({ date, kr, en, info }: CareerCardProp) => {
         <p className='md:min-w-10 ml-2 w-full md:max-w-40 max-w-24 text-gray-500 text-lg'>
           {date}
         </p>
-        <div className='max-w-64 md:max-w-[600px]'>
+        <div className='max-w-64 md:max-w-[600px] w-full'>
           <div className='flex flex-col w-full pl-2'>
             <span className='flex flex-col md:flex-row md:gap-2 gap-0 md:items-center w-full'>
               <p className='md:text-base text-sm font-bold'>{en}</p>
