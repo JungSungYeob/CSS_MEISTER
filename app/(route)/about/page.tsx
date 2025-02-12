@@ -57,7 +57,7 @@ export default function AboutMe() {
             ))}
           </div>
         </div>
-        <div className='flex flex-col items-center w-full pt-10'>
+        <div className='flex flex-col items-center w-full pt-10 pb-10'>
           <h1 className='text-4xl'>Honors & Awards</h1>
           <div className='w-full flex-col flex items-start'>
             {honorsAndAwards.map((item, i) => (
