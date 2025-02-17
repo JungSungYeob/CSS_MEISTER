@@ -12,7 +12,7 @@ const HonorCard = ({ date, kr, en, prize, organization }: HonorCardProp) => {
   return (
     <>
       <article className='flex flex-row w-full py-5 border-l-4 dark:border-white border-black items-center'>
-        <FaCircle className='relative -left-2' size={13} />
+        <FaCircle className='relative -left-2 min-w-3 w-3' />
         <p className='md:min-w-10 ml-2 w-full max-w-20 text-gray-500 text-lg'>
           {date}
         </p>

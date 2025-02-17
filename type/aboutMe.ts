@@ -15,3 +15,9 @@ export type honorsAndAwardsProps = {
   info: string;
   organization: string;
 };
+
+export type mySkillsProps = {
+  category: 'skill' | 'tool';
+  src: string;
+  name: string;
+};

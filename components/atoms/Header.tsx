@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NotReady from './NotReady';
 
 export const Header = () => {
   return (
@@ -31,20 +32,22 @@ export const Header = () => {
             </span>
 
             <span className='relative'>
-              <Link
+              {/* <Link
                 href='guestbook'
                 className='animate-underline cursor-pointer'
               >
                 guestbook
-              </Link>
+              </Link> */}
+              <NotReady>guestbook</NotReady>
             </span>
             <span className='relative'>
-              <Link
+              {/* <Link
                 href='playground'
                 className='animate-underline cursor-pointer'
               >
                 playground
-              </Link>
+              </Link> */}
+              <NotReady>playground</NotReady>
             </span>
           </div>
         </div>
