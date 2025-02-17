@@ -1,4 +1,8 @@
-import { honorsAndAwardsProps, timestampProps } from '@/type/aboutMe';
+import {
+  honorsAndAwardsProps,
+  mySkillsProps,
+  timestampProps,
+} from '@/type/aboutMe';
 
 export const timestamps: timestampProps[] = [
   {
@@ -97,5 +101,91 @@ export const honorsAndAwards: honorsAndAwardsProps[] = [
     prize: '장려상',
     info: '아이소메트릭 기법을 활용한 맵 제작',
     organization: '광운대학교',
+  },
+];
+
+export const mySkills: mySkillsProps[] = [
+  {
+    category: 'skill',
+    src: '/images/logos/typescript.png',
+    name: 'TypeScript',
+  },
+  {
+    category: 'skill',
+    src: '/images/logos/javascript.png',
+    name: 'JavaScript',
+  },
+  {
+    category: 'skill',
+    src: '/images/logos/nextjs.jpeg',
+    name: 'Next.js',
+  },
+  {
+    category: 'skill',
+    src: '/images/logos/react.png',
+    name: 'React',
+  },
+  {
+    category: 'skill',
+    src: '/images/logos/radix-ui.png',
+    name: 'Radix-UI',
+  },
+  {
+    category: 'skill',
+    src: '/images/logos/tailwindcss.png',
+    name: 'Tailwind CSS',
+  },
+  {
+    category: 'skill',
+    src: '/images/logos/css.svg',
+    name: 'CSS',
+  },
+  {
+    category: 'skill',
+    src: '/images/logos/html5.png',
+    name: 'HTML',
+  },
+];
+
+export const myTools: mySkillsProps[] = [
+  {
+    category: 'tool',
+    src: '/images/logos/git.png',
+    name: 'Git',
+  },
+  {
+    category: 'tool',
+    src: '/images/logos/github.png',
+    name: 'Github',
+  },
+  {
+    category: 'tool',
+    src: '/images/logos/slack.webp',
+    name: 'Slack',
+  },
+  {
+    category: 'tool',
+    src: '/images/logos/trello.png',
+    name: 'Trello',
+  },
+  {
+    category: 'tool',
+    src: '/images/logos/notion.png',
+    name: 'Notion',
+  },
+  {
+    category: 'tool',
+    src: '/images/logos/figma.webp',
+    name: 'Figma',
+  },
+  {
+    category: 'tool',
+    src: '/images/logos/postman.svg',
+    name: 'Postman',
+  },
+  {
+    category: 'tool',
+    src: '/images/logos/msteams.png',
+    name: 'MS Teams',
   },
 ];
