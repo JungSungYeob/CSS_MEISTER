@@ -145,6 +145,16 @@ export const mySkills: mySkillsProps[] = [
     src: '/images/logos/html5.png',
     name: 'HTML',
   },
+  {
+    category: 'skill',
+    src: '/images/logos/zustand.svg',
+    name: 'Zustand',
+  },
+  {
+    category: 'skill',
+    src: '/images/logos/storybook.png',
+    name: 'Storybook',
+  },
 ];
 
 export const myTools: mySkillsProps[] = [

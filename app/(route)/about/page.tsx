@@ -2,7 +2,9 @@ import CareerCard from '@/components/atoms/CareerCard';
 import HonorCard from '@/components/atoms/HonorCard';
 import SkillChip from '@/components/atoms/SkillChip';
 import Intro from '@/components/molecules/Intro';
+import MyProject from '@/components/molecules/MyProject';
 import { honorsAndAwards, mySkills, myTools, timestamps } from '@/data/aboutMe';
+import { Project1, Project2 } from '@/data/project';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -10,7 +12,7 @@ export default function AboutMe() {
   return (
     <>
       <Intro />
-      <div id='target1' className='mt-10'>
+      <div id='target1' className='mt-10 pb-20'>
         <article id='info'>
           <h2 className='text-3xl font-bold pb-2'>Profile</h2>
           <div className='flex flex-col gap-2'>
@@ -86,7 +88,7 @@ export default function AboutMe() {
             ))}
           </div>
         </article>
-        <article className='flex flex-col items-center w-full pt-10 pb-10 border-b-2 pb-2'>
+        <article className='flex flex-col items-center w-full pt-10 pb-10 border-b-2'>
           <h1 className='text-4xl mb-2'>Honors & Awards</h1>
           <div className='w-full flex-col flex items-start'>
             {honorsAndAwards.map((item, i) => (
@@ -103,6 +105,11 @@ export default function AboutMe() {
         </article>
         <article>
           <h1 className='text-4xl mb-2 w-full text-center'>My Projects</h1>
+          <article className='flex flex-col gap-5'>
+            <MyProject {...Project1} />
+            <MyProject {...Project2} />
+            {/* <MyProject {...Project3} /> */}
+          </article>
         </article>
       </div>
     </>

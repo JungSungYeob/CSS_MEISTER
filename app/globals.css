@@ -81,6 +81,10 @@ body {
   .animate-underline {
     @apply after:transform-left after:absolute after:left-auto after:right-0 after:block after:w-0 after:transform after:border-b-2 after:dark:border-white after:border-black after:duration-300 after:ease-out hover:after:left-0 hover:after:right-auto hover:after:w-full;
   }
+
+  .highlight {
+    @apply dark:bg-yellow-800 bg-yellow-100;
+  }
 }
 
 @layer utilities {
