@@ -38,7 +38,7 @@ export const Header = () => {
               >
                 guestbook
               </Link> */}
-              <NotReady>guestbook</NotReady>
+              <NotReady>Portfolio</NotReady>
             </span>
             <span className='relative'>
               {/* <Link

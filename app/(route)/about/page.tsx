@@ -4,7 +4,7 @@ import SkillChip from '@/components/atoms/SkillChip';
 import Intro from '@/components/molecules/Intro';
 import MyProject from '@/components/molecules/MyProject';
 import { honorsAndAwards, mySkills, myTools, timestamps } from '@/data/aboutMe';
-import { Project1 } from '@/data/project';
+import { Project1, Project2, Project3 } from '@/data/project';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
@@ -105,7 +105,11 @@ export default function AboutMe() {
         </article>
         <article>
           <h1 className='text-4xl mb-2 w-full text-center'>My Projects</h1>
-          <MyProject {...Project1} />
+          <article className='flex flex-col gap-5'>
+            <MyProject {...Project1} />
+            <MyProject {...Project2} />
+            <MyProject {...Project3} />
+          </article>
         </article>
       </div>
     </>

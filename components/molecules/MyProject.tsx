@@ -8,7 +8,7 @@ import SkillChip from '../atoms/SkillChip';
 
 const MyProject = (project: myProjectProps) => {
   return (
-    <div className='flex flex-col gap-5'>
+    <div className='flex flex-col gap-5 border-b'>
       <div>
         <div className='flex flex-row gap-3 items-center pb-2'>
           <Image
@@ -57,7 +57,7 @@ const MyProject = (project: myProjectProps) => {
           <li className='break-keep font-semibold text-lg'>
             {project.role.name}
           </li>
-          <ul className='list-[circle] ml-5'>
+          <ul className='list-[circle] ml-5 flex flex-col gap-1'>
             {project.role.detail.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
@@ -66,20 +66,42 @@ const MyProject = (project: myProjectProps) => {
       </article>
       <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Service</h4>
-      </article>
-      <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
-        <h4 className='text-lg col-span-1 font-semibold'>Achievement</h4>
-        <div className='md:col-span-4 col-span-2'>
-          {project.achievement.map((item, i) => (
+        <div className='md:col-span-4 col-span-2 flex flex-col gap-3'>
+          {project.service.map((item, i) => (
             <ul className='list-disc' key={i}>
-              <li className='font-semibold text-lg break-keep bg-yellow-100 dark:bg-yellow-800 w-fit'>
+              <li className='font-semibold text-lg break-keep w-fit'>
                 {item.title}
               </li>
-              <ul className='list-[circle] ml-5'>
+              <ul className='list-[circle] ml-5 flex flex-col gap-1'>
                 {item.content.map((content, index) => (
-                  <li className='break-keep' key={index}>
-                    {content}
-                  </li>
+                  <li
+                    dangerouslySetInnerHTML={{ __html: content }}
+                    className='break-keep'
+                    key={index}
+                  ></li>
+                ))}
+              </ul>
+            </ul>
+          ))}
+        </div>
+      </article>
+      <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
+        <h4 className='text-lg col-span-1 font-semibold overflow-x-hidden'>
+          Achievement
+        </h4>
+        <div className='md:col-span-4 col-span-2 flex flex-col gap-3'>
+          {project.achievement.map((item, i) => (
+            <ul className='list-disc flex flex-col' key={i}>
+              <li className='font-semibold text-lg break-keep highlight w-fit'>
+                {item.title}
+              </li>
+              <ul className='list-[circle] ml-5 flex flex-col gap-1'>
+                {item.content.map((content, index) => (
+                  <li
+                    dangerouslySetInnerHTML={{ __html: content }}
+                    className='break-keep'
+                    key={index}
+                  ></li>
                 ))}
               </ul>
             </ul>
@@ -102,9 +124,9 @@ const MyProject = (project: myProjectProps) => {
           <p>{project.architectureDetail}</p>
         </div>
       </article>
-      <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
+      {/* <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Evaluation</h4>
-      </article>
+      </article> */}
       <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Awards</h4>
         <p className='whitespace-nowrap md:col-span-4 col-span-2'>

@@ -8,8 +8,10 @@ type roleProps = {
 
 type achievementProps = {
   title: string;
-  content: React.ReactNode[];
+  content: string[];
 };
+
+type serviceProps = achievementProps;
 
 export type myProjectProps = {
   projectImg: string;
@@ -20,7 +22,7 @@ export type myProjectProps = {
   githubLink: Url;
   githubLinkTitle: string;
   role: roleProps;
-  service: string;
+  service: serviceProps[];
   achievement: achievementProps[];
   architectureImg: string;
   architectureDetail?: string;
