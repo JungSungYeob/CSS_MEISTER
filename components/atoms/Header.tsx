@@ -31,15 +31,15 @@ export const Header = () => {
               </Link>
             </span>
 
-            <span className='relative'>
+            {/* <span className='relative'> */}
               {/* <Link
                 href='guestbook'
                 className='animate-underline cursor-pointer'
               >
                 guestbook
               </Link> */}
-              <NotReady>Portfolio</NotReady>
-            </span>
+              {/* <NotReady>portfolio</NotReady> */}
+            {/* </span> */}
             <span className='relative'>
               {/* <Link
                 href='playground'

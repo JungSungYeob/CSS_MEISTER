@@ -16,6 +16,7 @@ const MyProject = (project: myProjectProps) => {
             alt='프로젝트 이미지'
             width={60}
             height={60}
+            className='rounded-lg'
           />
           <h1 className='text-3xl font-semibold text-gray-700 dark:text-gray-300'>
             {project.title}
