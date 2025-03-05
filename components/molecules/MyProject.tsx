@@ -29,7 +29,7 @@ const MyProject = (project: myProjectProps) => {
       </div>
       <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Skills</h4>
-        <div className='md:col-span-4 col-span-2 grid grid-cols-2 md:grid-cols-4 gap-5'>
+        <div className='md:col-span-4 col-span-2 grid grid-cols-2 md:grid-cols-4 gap-5 border-l-2 pl-1'>
           {project.skills.map((item, i) => (
             <SkillChip
               category={item.category}
@@ -42,11 +42,11 @@ const MyProject = (project: myProjectProps) => {
       </article>
       <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Link</h4>
-        <span className='relative w-fit inline-flex items-center gap-2 md:col-span-4 col-span-2'>
+        <span className='relative w-fit inline-flex items-center gap-2 md:col-span-4 col-span-2 border-l-2 pl-1'>
           <FaLink />
           <Link
             href={project.githubLink}
-            className='animate-underline whitespace-nowrap'
+            className='animate-underline whitespace-nowrap '
           >
             {project.githubLinkTitle}
           </Link>
@@ -54,7 +54,7 @@ const MyProject = (project: myProjectProps) => {
       </article>
       <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Role</h4>
-        <ul className='md:col-span-4 col-span-2 list-disc'>
+        <ul className='md:col-span-4 col-span-2 list-disc pl-5 border-l-2'>
           <li className='break-keep font-semibold text-lg'>
             {project.role.name}
           </li>
@@ -67,7 +67,7 @@ const MyProject = (project: myProjectProps) => {
       </article>
       <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Service</h4>
-        <div className='md:col-span-4 col-span-2 flex flex-col gap-3'>
+        <div className='md:col-span-4 col-span-2 flex flex-col gap-3 pl-5 border-l-2'>
           {project.service.map((item, i) => (
             <ul className='list-disc' key={i}>
               <li className='font-semibold text-lg break-keep w-fit'>
@@ -90,7 +90,7 @@ const MyProject = (project: myProjectProps) => {
         <h4 className='text-lg col-span-1 font-semibold overflow-x-hidden'>
           Achievement
         </h4>
-        <div className='md:col-span-4 col-span-2 flex flex-col gap-3'>
+        <div className='md:col-span-4 col-span-2 flex flex-col gap-3 pl-5 border-l-2'>
           {project.achievement.map((item, i) => (
             <ul className='list-disc flex flex-col' key={i}>
               <li className='font-semibold text-lg break-keep highlight w-fit'>
@@ -111,7 +111,7 @@ const MyProject = (project: myProjectProps) => {
       </article>
       <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Architecture</h4>
-        <div className='md:col-span-4 col-span-2 flex flex-col'>
+        <div className='md:col-span-4 col-span-2 flex flex-col border-l-2 pl-1'>
           <Image
             src={project.architectureImg}
             alt='아키텍처 이미지'
@@ -130,7 +130,7 @@ const MyProject = (project: myProjectProps) => {
       </article> */}
       <article className='grid md:grid-cols-5 grid-cols-3 items-start'>
         <h4 className='text-lg col-span-1 font-semibold'>Awards</h4>
-        <p className='whitespace-nowrap md:col-span-4 col-span-2'>
+        <p className='whitespace-nowrap md:col-span-4 col-span-2 border-l-2 pl-1'>
           {project.awards}
         </p>
       </article>
